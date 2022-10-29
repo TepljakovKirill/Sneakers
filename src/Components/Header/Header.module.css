@@ -1,0 +1,33 @@
+header {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eaeaea;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+.headerLogo {
+  display: flex;
+  align-items: center;
+}
+
+.headerLogo img {
+  margin-right: 15px;
+}
+
+.headerBasket img:first-child {
+  margin-right: 30px;
+}
+
+.headerBasket span {
+  margin-right: 30px;
+}

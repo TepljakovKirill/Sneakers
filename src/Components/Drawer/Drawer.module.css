@@ -1,0 +1,131 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.drawer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 420px;
+  height: 100%;
+  right: 0;
+  background: #fff;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.basket {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.cartItems {
+  flex: 1;
+  overflow: auto;
+}
+
+.cartItem {
+  margin-bottom: 20px;
+  border: 1px solid #f3f3f3;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px 20px;
+}
+
+.cartItem img {
+  margin-right: 20px;
+}
+
+.cartItemDescr {
+  margin-right: 20px;
+}
+
+.cartItemDescr p {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.cartItemDescr b {
+  font-size: 14px;
+}
+
+.removeBtn {
+  opacity: 0.5;
+  transition: opacity 0.22s ease-in-out;
+  cursor: pointer;
+}
+
+.removeBtn:hover {
+  opacity: 1;
+}
+
+.total,
+.totalTax {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.total p,
+.totalTax p {
+  margin-right: 20px;
+}
+
+.total b,
+.totalTax b {
+  margin-left: 20px;
+}
+
+.borderBottom {
+  flex: 1;
+  border-bottom: 1px dashed #dfdfdf;
+}
+
+.totalButton {
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  height: 55px;
+  background: #9dd558;
+  border-radius: 18px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.totalButton::after {
+  content: "";
+  top: 21px;
+  right: 22px;
+  background-image: url(../../../public/img/arrow.svg);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-repeat: no-repeat;
+  transition: 0.2s ease-in-out;
+}
+
+.totalButton:hover::after {
+  transform: translateX(5px);
+}
+
+.totalButton:hover {
+  background-color: #91cf4a;
+}
+
+.totalButton:active {
+  background-color: #6c9939;
+}

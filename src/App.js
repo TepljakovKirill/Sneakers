@@ -3,6 +3,24 @@ import Header from "./Components/Header";
 import Card from "./Components/Card";
 import "./index.css";
 
+const arr = [
+  {
+    name: "Мужские Кроссовки Nike Blazer Mid Suede",
+    price: 12990,
+    imageUrl: "/img/Sneakers/sneakers-1.jpg",
+  },
+  {
+    name: "Мужские Кроссовки Nike Air Max 270",
+    price: 10990,
+    imageUrl: "/img/Sneakers/sneakers-2.jpg",
+  },
+  {
+    name: "Мужские Кроссовки Nike Blazer Mid Suede",
+    price: 2990,
+    imageUrl: "/img/Sneakers/sneakers-3.jpg",
+  },
+];
+
 function App() {
   return (
     <div className="wrapper">
@@ -17,7 +35,9 @@ function App() {
           </div>
         </div>
         <div className="sneakers">
-          <Card />
+          {arr.map((obj) => (
+            <Card title={obj.name} price={obj.price} imageUrl={obj.imageUrl} />
+          ))}
         </div>
       </div>
     </div>
