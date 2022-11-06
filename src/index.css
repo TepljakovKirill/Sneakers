@@ -30,6 +30,8 @@ body {
 
 .sneakers {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 h5 {

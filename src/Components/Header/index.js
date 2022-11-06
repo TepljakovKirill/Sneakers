@@ -1,6 +1,6 @@
 import styles from "./Header.module.css";
 
-function Header() {
+function Header(props) {
   return (
     <header>
       <div className={styles.headerLogo}>
@@ -10,7 +10,7 @@ function Header() {
           <p>Магазин лучших кроссовок</p>
         </div>
       </div>
-      <div className={styles.headerBasket}>
+      <div onClick={props.onClickCart} className={styles.headerBasket}>
         <img width={18} height={18} src="/img/cart.svg" alt="логотип" />
         <span>1205 руб.</span>
         <img width={18} height={18} src="/img/user.svg" alt="логотип" />
