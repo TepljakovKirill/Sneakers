@@ -1,20 +1,20 @@
 <script setup>
 import Card from './Card.vue';
 
-const onClickAdd = () => {
-
-}
+defineProps({
+  items: Array
+})
 
 </script>
 
 <template>
   <div class='grid grid-cols-4 gap-5'>
     <Card
-      :price='5000'
-      title='Мужские кроссовки Nike'
-      imageUrl='/sneakers/sneakers-1.jpg'
-      :isAdded='false'
-      :isFavorite='true'
+      v-for='item in items'
+      :key='item.id'
+      :price='item.price'
+      :title='item.title'
+      :imageUrl='item.imageUrl'
       :onClickAdd='onClickAdd'
     />
   </div>
